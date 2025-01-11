@@ -57,6 +57,19 @@ class SupabaseService {
     this.cache[slug] = data;
     console.log('Post cached');
   }
+  async saveEditorContent(content, imageUrl, title) {
+    const { data, error } = await this.supabase
+      .from('editor_data')
+      .insert([{
+        content,
+        title,
+        image_url: imageUrl || '',
+      }])
+      .select();
+
+    if (error) throw error;
+    return data;
+  }
 }
 
 export const supabaseService = new SupabaseService();
