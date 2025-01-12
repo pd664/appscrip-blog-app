@@ -74,4 +74,4 @@ export default async function HeroSection() {
   );
 }
 
-HeroSection.revalidate = 10; // Revalidate every 60 seconds
+HeroSection.revalidate = 2;

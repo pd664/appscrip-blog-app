@@ -9,7 +9,7 @@ export const fetchFirstThreeImages = async () => {
         const response = await fetch(
             `https://${bucketName}.s3.${region}.amazonaws.com?prefix=${folder}/`, {
                 next: {
-                    revalidate: 10
+                    revalidate: 2
                 }
             }
         );

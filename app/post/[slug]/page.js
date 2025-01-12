@@ -79,4 +79,4 @@ export default async function PostPage({ params }) {
   );
 }
 
-PostPage.revalidate = 10; // Revalidate every 60 seconds
+PostPage.revalidate = 2; 
